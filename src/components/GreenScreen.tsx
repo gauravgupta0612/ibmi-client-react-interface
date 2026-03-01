@@ -59,9 +59,64 @@ const GreenScreen: React.FC<GreenScreenProps> = ({
   if (!screenData) {
     return (
       <div className="green-screen-container">
+        <div className="green-screen-header">
+          <div className="screen-info">
+            <span>IBM i Green Screen Terminal</span>
+            <span className="cursor-pos">Ready</span>
+          </div>
+        </div>
         <div className="green-screen-display">
-          <div className="waiting-message">
-            {loading ? 'Loading screen...' : 'No screen data available'}
+          <div className="welcome-screen">
+            <div className="welcome-banner">
+              ╔════════════════════════════════════════════════════════════════╗
+            </div>
+            <div className="welcome-banner"></div>
+            <div className="welcome-banner">
+              ║                                                                ║
+            </div>
+            <div className="welcome-banner">
+              ║          🔵 IBM i GREEN SCREEN INTERFACE 🔵                  ║
+            </div>
+            <div className="welcome-banner">
+              ║                                                                ║
+            </div>
+            <div className="welcome-banner">
+              ║          Ready to connect to IBM i System                     ║
+            </div>
+            <div className="welcome-banner">
+              ║                                                                ║
+            </div>
+            <div className="welcome-banner">
+              ║          • Configure connection in the left panel             ║
+            </div>
+            <div className="welcome-banner">
+              ║          • Enter Host Address (e.g., 10.5.11.40)              ║
+            </div>
+            <div className="welcome-banner">
+              ║          • Enter Port (default: 23 for Telnet)                ║
+            </div>
+            <div className="welcome-banner">
+              ║          • Enter Username and Password                        ║
+            </div>
+            <div className="welcome-banner">
+              ║          • Click CONNECT to establish session                 ║
+            </div>
+            <div className="welcome-banner">
+              ║                                                                ║
+            </div>
+            <div className="welcome-banner">
+              ║          Language: {SupportedLanguages[language as keyof typeof SupportedLanguages]?.name || language}                                  ║
+            </div>
+            <div className="welcome-banner">
+              ║          CCSID: {SupportedCCSID[ccsid as keyof typeof SupportedCCSID]?.name || ccsid}                                    ║
+            </div>
+            <div className="welcome-banner">
+              ║                                                                ║
+            </div>
+            <div className="welcome-banner">
+              ╚════════════════════════════════════════════════════════════════╝
+            </div>
+            {loading && <div className="loading-text">Loading screen...</div>}
           </div>
         </div>
       </div>

@@ -70,7 +70,7 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div className="header-content">
-          <h1 className="app-title">IBM i Green Screen Interface</h1>
+          <h1 className="app-title">🔵 IBM Green Screen Interface</h1>
           <div className="connection-status">
             <span className={`status-badge ${connection.isConnected ? 'connected' : 'disconnected'}`}>
               {connection.isConnected ? '● Connected' : '● Disconnected'}

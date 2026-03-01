@@ -197,6 +197,32 @@
   transform: translateY(-50%);
 }
 
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.welcome-banner {
+  color: #00ff00;
+  margin: 0;
+  line-height: 1.8;
+  font-family: 'Courier New', monospace;
+  white-space: pre;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.loading-text {
+  color: #ffff00;
+  margin-top: 20px;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .green-screen-display {
